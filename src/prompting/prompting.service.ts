@@ -46,7 +46,7 @@ export class PromptingService {
         formData,
         {
           headers: {
-            Authorization: 'Bearer ' + process.env.API_KEY,
+            Authorization: 'Bearer ' + process.env.API_KEY, // CREATE YOUR .ENV FILE AND PUT THERE API_KEY (STABILITY API KEY)
             Accept: 'image/png',
             ...formData.getHeaders(),
           },
