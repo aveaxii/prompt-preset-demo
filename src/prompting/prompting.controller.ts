@@ -59,9 +59,9 @@ export class PromptingController {
     res.end(imageBuffer);
   }
 
-  @Post('preset-v2')
+  @Post('inpaint')
   @UseInterceptors(FileInterceptor('image'))
-  async getPromptingV2(
+  async getInpaintV2(
     @Res() res: Response,
     @UploadedFile() image: Express.Multer.File,
     @Body('userPrompt') userPrompt: string,
@@ -85,7 +85,7 @@ export class PromptingController {
 
   @Post('outpaint')
   @UseInterceptors(FileInterceptor('image'))
-  async outpaint(
+  async getOutpaintV2(
     @Res() res: Response,
     @UploadedFile() image: Express.Multer.File,
     @Body('userPrompt') userPrompt: string,
